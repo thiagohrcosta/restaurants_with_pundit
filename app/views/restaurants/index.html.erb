@@ -13,6 +13,15 @@
     <p><%= restaurant.name %></p>
     <p>Created by: <%= restaurant.user.email %></p>
     </div>
+    <div class="btn-style">
+      <%= link_to 'Show', restaurant, class: "btn-show" %>
+      <% if policy(restaurant).edit? %>
+      <%= link_to 'Edit', edit_restaurant_path(restaurant), class: "btn-edit" %>
+      <% end %>
+      <% if policy(restaurant).destroy? %>
+      <%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-destroy" %>
+      <% end %>
+    </div>
   </div>
   <% end %>
 </div>

@@ -23,7 +23,7 @@
 .menu-box{
   background-color: #fff;
   margin: 10px 0 20px;
-  height: 300px;
+  height: 380px;
   border: 1px solid #E8E8E8;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -35,4 +35,30 @@
 
 .menu-title{
   padding: 20px;
+}
+
+.btn-style{
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-show{
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px 25px;
+  background-color: #91c788;
+}
+.btn-destroy{
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px 25px;
+  background-color: #f05945;
+}
+
+.btn-edit{
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px 25px;
+  background-color: #5eaaa8;
 }
