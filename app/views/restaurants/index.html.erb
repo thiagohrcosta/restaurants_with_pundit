@@ -8,7 +8,7 @@
 <div class="menu-grid">
   <% @restaurants.each do |restaurant| %>
   <div class="menu-box">
-    <img class="img-menu" src="https://i.pinimg.com/564x/87/82/31/878231c2bb782feb5cb5592e674d39b0.jpg">
+    <img class="img-menu" src="<%= restaurant.image %>">
     <div class="menu-title">
     <p><%= restaurant.name %></p>
     <p>Created by: <%= restaurant.user.email %></p>
