@@ -1,8 +1,12 @@
 class RestaurantPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.where(user :user)
+      scope.all
     end
+  end
+
+  def index?
+    true
   end
 
   def new?

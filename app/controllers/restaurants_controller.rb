@@ -3,7 +3,7 @@ class RestaurantsController < ApplicationController
 
   def index
     #@restaurants = Restaurant.all
-    @restaurant = policy_scope(Restaurant)
+    @restaurants = policy_scope(Restaurant)
   end
 
   def show; end
