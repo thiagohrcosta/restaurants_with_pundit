@@ -6,6 +6,7 @@ class RestaurantsController < ApplicationController
   end
 
   def show
+    authorize @restaurant
   end
 
   def new
