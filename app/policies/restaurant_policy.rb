@@ -20,11 +20,11 @@ class RestaurantPolicy < ApplicationPolicy
   def edit?
     # user => current_user
     # record => @restaurant
-    is_owner?
+    is_owner_or_admin?
   end
 
   def update?
-    is_owner?
+    is_owner_or_admin?
   end
 
   def show?
@@ -32,12 +32,12 @@ class RestaurantPolicy < ApplicationPolicy
   end
 
   def destroy?
-    is_owner?
+    is_owner_or_admin?
   end
 
   private
 
-  def is_owner?
-    record.user == user
+  def is_owner_or_admin?
+    record.user == user || user.admin
   end
 end
