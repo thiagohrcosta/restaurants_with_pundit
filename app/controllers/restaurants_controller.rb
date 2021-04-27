@@ -2,7 +2,8 @@ class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: %i[ show edit update destroy ]
 
   def index
-    @restaurants = Restaurant.all
+    #@restaurants = Restaurant.all
+    @restaurant = policy_scope(Restaurant)
   end
 
   def show; end
