@@ -5,18 +5,14 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all
   end
 
-  def show
-    authorize @restaurant
-  end
+  def show; end
 
   def new
     @restaurant = Restaurant.new
     authorize @restaurant
   end
 
-  def edit
-    authorize @restaurant
-  end
+  def edit; end
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
@@ -48,6 +44,7 @@ class RestaurantsController < ApplicationController
 
   def set_restaurant
     @restaurant = Restaurant.find(params[:id])
+    authorize @restaurant
   end
 
   def restaurant_params
