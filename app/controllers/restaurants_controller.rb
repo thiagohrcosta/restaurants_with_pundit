@@ -11,14 +11,19 @@ class RestaurantsController < ApplicationController
 
   def new
     @restaurant = Restaurant.new
+    authorize @restaurant
   end
 
   def edit
+    authorize @restaurant
   end
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
     @restaurant.user = current_user
+
+    authorize @restaurant
+
     if @restaurant.save
       redirect_to @restaurant, notice: "Restaurant was successfully created."
     else
